@@ -32,6 +32,12 @@ void bubbleSortParallel(int* arr, int size) {
 }
 
 int main() {
+    /*const int size = 1000;
+    int arr[size];
+    for (int i = 0; i < size; i++) {
+        arr[i] = rand() % 1000;  // Random numbers between 0 and 999
+    }*/
+    
     int size;
     std::cout << "Enter the size of the array: ";
     std::cin >> size;
