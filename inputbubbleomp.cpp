@@ -42,25 +42,11 @@ int main() {
         std::cin >> arr[i];
     }
 
-    // Display unsorted array
-    std::cout << "Unsorted Array: ";
-    for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
-    }
-    std::cout << std::endl;
-
     // Measure sequential bubble sort time
     clock_t startSeqBubble = clock();
     bubbleSortSequential(arr, size);
     clock_t endSeqBubble = clock();
     double timeSeqBubble = double(endSeqBubble - startSeqBubble) / CLOCKS_PER_SEC;
-
-    // Display sorted array from sequential bubble sort
-    std::cout << "Sorted Array (Sequential): ";
-    for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
-    }
-    std::cout << std::endl;
 
     // Measure parallel bubble sort time
     clock_t startParBubble = clock();
@@ -69,7 +55,7 @@ int main() {
     double timeParBubble = double(endParBubble - startParBubble) / CLOCKS_PER_SEC;
 
     // Display sorted array from parallel bubble sort
-    std::cout << "Sorted Array (Parallel): ";
+    std::cout << "Sorted Array: ";
     for (int i = 0; i < size; i++) {
         std::cout << arr[i] << " ";
     }
