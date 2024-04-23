@@ -105,13 +105,16 @@ int main() {
     clock_t endParMerge = clock();
     double timeParMerge = double(endParMerge - startParMerge) / CLOCKS_PER_SEC;
 
+    // Display sorted array from parallel bubble sort
+    std::cout << "Sorted Array: ";
+    for (int i = 0; i < size; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+
     // Print execution times
     std::cout << "Sequential Merge Sort Time: " << timeSeqMerge << " seconds" << std::endl;
     std::cout << "Parallel Merge Sort Time: " << timeParMerge << " seconds" << std::endl;
-
-    for(int i = 0; i<size;i++){
-        std :: cout << arr[i] << " ";
-    }
 
     return 0;
 }
